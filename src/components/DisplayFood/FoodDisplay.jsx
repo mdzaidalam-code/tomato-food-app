@@ -14,10 +14,14 @@ const FoodDisplay = ({category}) => {
       </h2>
 
       <div className="food-display-list">
-        {food_list.map((item,id)=>{
-          return(
-            <FoodItem key={id} name={item.name} id={item._id} image={item.image} price={item.price} description={item.description} />
+        {food_list.map((item)=>{
+
+          if (category==='All' || category===item.category) {
+           
+            return(
+            <FoodItem key={item._id} name={item.name} id={item._id} image={item.image} price={item.price} description={item.description} />
           )
+          }
         })}
       </div>
     </div>
