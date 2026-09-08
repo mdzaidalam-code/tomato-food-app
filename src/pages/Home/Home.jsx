@@ -3,6 +3,7 @@ import './Home.css'
 import Header from '../../components/Header/Header'
 import ExploreMenu from '../../components/ExploreMenu/ExploreMenu'
 import FoodDisplay from '../../components/DisplayFood/FoodDisplay';
+import Footer from '../../components/Footer/Footer';
 
 
 function Home() {
