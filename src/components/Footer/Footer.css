@@ -42,6 +42,7 @@
 
 .footer-social-icons img{
   width: 38px;
+  cursor: pointer;
 }
 
 .footer hr{
@@ -50,4 +51,32 @@
   background-color: grey;
   border: none;
   margin: 10px 0;
+}
+
+@media(max-width:800px){
+  .footer-content{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .footer-social-icons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-content-center,.footer-content-right{
+    align-items: center;
+  }
+
+  .footer-content-center ul,.footer-content-right ul{
+    display: flex;
+    gap: 25px;
+    
+  }
+
+  .footer-copyrght{
+    text-align: center;
+  }
 }
