@@ -8,7 +8,7 @@ const ExploreMenu =({category,setCategory}) => {
   console.log("setCategory:", setCategory);
 
   return (
-    <div className="explore-menu">
+    <div className="explore-menu" id='explore-menu'>
       <h1>Explore our menu</h1>
       <p className='explore-menu-text'>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam ducimus expedita nemo nihil consequatur repellat?

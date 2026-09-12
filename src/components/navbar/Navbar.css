@@ -9,6 +9,7 @@
   cursor: pointer;
   display: flex;
   gap: 20px;
+  align-items: center;
   list-style: none;
   font-size: 16px;
   color: #4e4c4c;

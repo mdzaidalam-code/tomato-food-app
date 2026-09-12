@@ -4,7 +4,7 @@ import { assets } from '../../assets/frontend_assets/assets'
 const AppDownload = () => {
   return (
     <div>
-      <div className="app-download">
+      <div className="app-download" id='app-download'>
         <p>
           For Better Exprience Download<br />
           Tomato App
