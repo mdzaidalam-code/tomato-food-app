@@ -3,14 +3,16 @@ import "./Navbar.css";
 import { assets } from "../../assets/frontend_assets/assets";
 import { Link } from "react-router-dom";
 
-const Navbar = ({setShowLogin}) => {
+const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("mobile-app");
 
   return (
     <div className="navbar">
-      <img src={assets.logo} alt="" className="logo" />
+      <Link to='/' className="logo">
+      <img src={assets.logo} alt="" />
+      </Link>
       <ul className="navbar-menu">
-        <Link
+        <Link to='/'
           onClick={() => setMenu("home")}
           className={menu == "home" ? "active" : ""}
         >
@@ -40,11 +42,13 @@ const Navbar = ({setShowLogin}) => {
       </ul>
       <div className="navbar-right">
         <img src={assets.search_icon} alt="" />
-        <div className="navbar-search-icon">
+        <Link to="/c" className="navbar-search-icon">
           <img src={assets.basket_icon} alt="" />
           <div className="dot"></div>
-        </div>
-        <button onClick={()=>setShowLogin(true)} className="signin">Sign in</button>
+        </Link>
+        <button onClick={() => setShowLogin(true)} className="signin">
+          Sign in
+        </button>
       </div>
     </div>
   );
