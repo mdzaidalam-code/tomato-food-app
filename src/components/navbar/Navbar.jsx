@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/frontend_assets/assets";
 import { Link } from "react-router-dom";
+import { StoreContext } from "../../Context/StoreContext";
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("mobile-app");
+  const {calculateTotal} = useContext(StoreContext);
 
   return (
     <div className="navbar">
@@ -44,7 +46,7 @@ const Navbar = ({ setShowLogin }) => {
         <img src={assets.search_icon} alt="" />
         <Link to="/c" className="navbar-search-icon">
           <img src={assets.basket_icon} alt="" />
-          <div className="dot"></div>
+          <div className={calculateTotal() > 0 ? "dot" : ""} ></div>
         </Link>
         <button onClick={() => setShowLogin(true)} className="signin">
           Sign in
